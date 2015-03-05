@@ -6,7 +6,7 @@
 <body>
     {% if {{ location }} == '' %}
         <h2>Enter your location</h2>
-		<form action="/first_map" method="put">
+		<form action="/map" method="put">
 			<input type='input' value="" name='location'/>
 		</form>
 	{% else %}
