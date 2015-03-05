@@ -4,8 +4,15 @@
 	<title></title>
 </head>
 <body>
-    {% load easy_maps_tags %}
-		<!-- Default map with 300x400 dimensions -->
-		{% easy_map "India, Indore, Agrawal Nagar" 600 600 %}
+    {% if {{ location }} == '' %}
+        <h2>Enter your location</h2>
+		<form action="/first_map" method="put">
+			<input type='input' value="" name='location'/>
+		</form>
+	{% else %}
+		{% load easy_maps_tags %}
+		<!-- Default map with 600x600 dimensions -->
+		{% easy_map {{ location }} 600 600 %}
+	{% endif %}
 </body>
 </html>
