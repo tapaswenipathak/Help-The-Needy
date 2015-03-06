@@ -14,6 +14,14 @@
 			<!-- Default map with 600x600 dimensions -->
 			<h1> hello </h1>
 			<h1> {{location}} </h1>
+
+			{% load easy_maps_tags %}
+				<!-- Default map with 600x600 dimensions -->
+				<h1> hello </h1>
+				{% for ngo in location %}
+					<h1> {{ ngo }} </h1>
+			{% endfor %}
+
 			{% easy_map location  600 600  using "easy_maps/map.html" %}
 		{% endif %}
 		</div>
