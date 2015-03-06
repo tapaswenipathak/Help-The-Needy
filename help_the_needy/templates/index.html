@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+    {% block content %}
+        <!-- For input address: -->
+        <div class="row">                           
+            <form role="form" action="index.html" method="get">                                   
+                <div class="form-group">                                     
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="input-group">                                     
+                              <input type="text" class="form-control" placeholder="Enter Your Address...">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-warning" type="submit">Go!</button>
+                                    </span>
+                            </div><!-- /input-group -->
+                        </div><!-- /.col-lg-6 -->
+                        </div>
+                    </div>                                    
+            </form>                                                             
+    </div><!-- /.row for address input-->
+{% endblock %}                            
