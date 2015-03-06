@@ -84,7 +84,7 @@ STATIC_URL = '/static/'
 
 #Additional locations for static fiels
 STATICFILES_DIRS =  (
-    ('/home/shaifali/Documents/web-development/hackathon/Help-The-Needy/help_the_needy/static'),
+    ('assets', '/home/shaifali/Documents/web-development/hackathon/Help-The-Needy/help_the_needy/static'),
     #always put absolute path and forward slashes
     )
 
