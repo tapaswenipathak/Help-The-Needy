@@ -4,9 +4,10 @@ YOUR_API_KEY = 'AIzaSyBKmYWBe06Dcf_UCZMAoOcC7DyliluD76o'
 
 google_places = GooglePlaces(YOUR_API_KEY)
 
+loc = raw_input ("Enter your location ")
 # You may prefer to use the text_search API, instead.
 query_result = google_places.nearby_search(
-        location='Hyderabad', keyword='ngos and non profit organizations',
+        location=loc, keyword='ngos or non profit organizations',
         radius=20000)
 
 if query_result.has_attributions:
