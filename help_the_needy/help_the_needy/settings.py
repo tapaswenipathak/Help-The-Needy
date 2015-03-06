@@ -82,4 +82,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+#Additional locations for static fiels
+STATICFILES_DIRS =  (
+    ('/home/shaifali/Documents/web-development/hackathon/Help-The-Needy/help_the_needy/static'),
+    #always put absolute path and forward slashes
+    )
+
+
 TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
