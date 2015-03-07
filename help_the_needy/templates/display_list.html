@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="{% static "assets/css/styles.css"%}" rel="stylesheet">
+	 <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+	 <script src="/static/assets/js/script.js"></script>
+</head>
+<body>
+    {% if location  == '' %}
+        <h2>Enter your location</h2>
+		<form action="/map" method="POST">
+			{% csrf_token %}
+			{{ form }}
+			<input type='input' value="" name='location'/>
+		</form>
+	{% else %}
+		<!-- Default map with 600x600 dimensions -->
+		<div id='cssmenu'>
+		<ul>
+			{% for ngo in location %}
+				<li class='active has-sub'><a href='#'><span> {{ ngo }}</span></a>
+				 	<ul> 
+						<li><a href='#'><span> {{ngo}} </span></a> 
+					</ul>
+				</li>
+			{% endfor %}
+		</ul>
+		</div>
+		<div align="center">
+			{% load easy_maps_tags %}
+			{% easy_map location.0  600 600  using "easy_maps/map.html" %}
+		</div>
+	{% endif %}
+</body>
+</html>
