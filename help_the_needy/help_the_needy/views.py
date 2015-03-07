@@ -10,17 +10,18 @@ def home(request):
 	return render_to_response('index.html')
 
 def map(request):
-	ngos = []
+	ngos_name = []
 	loc = ""
 	if request.method == 'POST':
 		loc = request.POST.get('location', '')
+		print loc
 	query_result = google_places.nearby_search(
-			location="Delhi", keyword='ngos and non profit organizations',
+			location="Dilshad Garden", keyword='ngos and non profit organizations',
 			radius=20000)
-	if query_result.has_attributions:
-		print query_result.html_attributions
 	for place in query_result.places:
+		#place.get_details()
 		print place.name
-		ngos.append (place.name)
-		print place.geo_location
-	return render_to_response('display_map.html', {'location': ngos}, context_instance=RequestContext(request))
+		#print place.formatted_address
+		ngos_name.append(place.name)
+		#print place.geo_location
+	return render_to_response('display_list.html', {'location': ngos_name}, context_instance=RequestContext(request))
