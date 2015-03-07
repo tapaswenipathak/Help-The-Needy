@@ -4,11 +4,12 @@
         <!-- For input address: -->
         <img class="img-responsive" src="{% static "assets/img/profile.png"%}" alt="">
         <div class="row">                           
-            <form role="form" action="/map" method="get">
+            <form role="form" action="/map" method="POST">
                 <div class="form-group">                                     
                     <div class="col-lg-6" style="vertical-align: middle;width: 75%;float: none;display: inline-block;">
-                        <div class="input-group">                                
-                            <input type="text" class="form-control" placeholder="Enter Your Address...">
+                        <div class="input-group">
+                            {% csrf_token %}                                
+                            <input type="text" name="location" class="form-control" placeholder="Enter Your Address...">
                             <span class="input-group-btn">
                                 <button class="btn btn-warning" type="submit">Go!</button>
                             </span>

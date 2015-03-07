@@ -1,28 +1,31 @@
 {% extends "base.html" %}
-    {% block content %}  
-    	<!-- for map -->
-    	<div class="row"> 
-    	{% if location  == '' %}
-        	<h2>Enter your location</h2>
-			<form action="/map" method="POST">
-				{% csrf_token %}
-				{{ form }}
-				<input type='input' value="" name='location'/>
-			</form>
-		{% else %}
-			{% load easy_maps_tags %}
-			<!-- Default map with 600x600 dimensions -->
-			<h1> hello </h1>
-			<h1> {{location}} </h1>
+{% block content %}
 
-			{% load easy_maps_tags %}
-				<!-- Default map with 600x600 dimensions -->
-				<h1> hello </h1>
-				{% for ngo in location %}
-					<h1> {{ ngo }} </h1>
+    {% if location  == '' %}
+        <h2>Enter your location</h2>
+		<form action="/map" method="POST">
+			{% csrf_token %}
+			{{ form }}
+			<input type='input' value="" name='location'/>
+		</form>
+	{% else %}
+		<!-- Default map with 600x600 dimensions -->
+		<div class="container">
+		<div id='cssmenu' class="menu">
+		<ul>
+			{% for ngo in location %}
+				<li class='active has-sub'><a href='#'><span> {{ ngo }}</span></a>
+				 	<ul> 
+						<li><a href='#'><span> {{ngo}} </span></a> 
+					</ul>
+				</li>
 			{% endfor %}
-
-			{% easy_map location  600 600  using "easy_maps/map.html" %}
-		{% endif %}
+		</ul>
 		</div>
+		<div class="map">	
+			{% load easy_maps_tags %}
+			{% easy_map location.0  600 600  using "easy_maps/map.html" %}
+		</div>
+		
+	{% endif %}
 {% endblock %}
