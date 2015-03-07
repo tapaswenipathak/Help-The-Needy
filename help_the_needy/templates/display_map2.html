@@ -1,18 +1,21 @@
 {% extends "base.html" %}
     {% block content %}  
     	<!-- for map -->
-    	<div style="color: grey;"> 
+    	<div class="row"> 
     	{% if location  == '' %}
-        	<form action="#" method="POST">
+        	<h2>Enter your location</h2>
+			<form action="/map2" method="POST">
 				{% csrf_token %}
-				<input type='input' placeholder="Enter Your Address..." value="" name='location'/> <input type="submit" value="Go!">
+				{{ form }}
+				<input type='input' value="" name='location'/>
 			</form>
 		{% else %}
-		    <div class="col-lg-6" style="vertical-align:middle; width:75%; float:none; display: inline-block;">
 			{% load easy_maps_tags %}
 			<!-- Default map with 600x600 dimensions -->
+			<h1> hello </h1>
+			<h1> {{location}} </h1>
+
 			{% easy_map location  600 600  using "easy_maps/map.html" %}
-			</div>
 		{% endif %}
 		</div>
 {% endblock %}
