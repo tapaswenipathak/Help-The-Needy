@@ -13,10 +13,14 @@
     </div>
     <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
       <div class="panel-body">
-      Details : 
-      {% for detail in details %} </br>
-          {{ detail }}  
-      {% endfor %}        
+      <h5> Details : </h5>
+      <ul>
+        <li><b> Address: </b> {{ details.0 }}</li>
+        <li><b> Local Phone Number: </b> {{ details.1 }} </li>
+        <li><b> International Phone Number: </b>{{ details.2 }}</li>
+        <li><a href={{ details.4 }}> Website </a></li>
+        <li><a href={{ details.3 }}> Other Url </a></li>        
+      </ul>
         <div>
         <button type="button" class="btn btn-warning pull-right">See Map</button>
       </div>
