@@ -17,6 +17,16 @@ This will give you all nearby NGOs with a map, given a address by a user.
 	```
 	pip install -r /path/to/requirements.txt
 	```
+* Install Bootstrap
+
+	```
+	sudo apt-get update
+	sudo apt-get install -y python-software-properties python g++ make
+	sudo add-apt-repository ppa:chris-lea/node.js
+	sudo apt-get update
+	sudo apt-get install nodejs
+	sudo npm install bootstrap
+	```
 
 
 ## To Run
