@@ -1,6 +1,22 @@
 {% extends "base.html" %}
-{% block content %}
-
+{% load staticfiles %}
+    {% block content %}  
+    <div class="map">	
+			{% load easy_maps_tags %}
+			{% easy_map location  600 600  using "easy_maps/map.html" %}
+		</div>
+	<!-- <link href="{% static "assets/css/styles.css"%}" rel="stylesheet">
+	 <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+	 <script src="/static/assets/js/script.js"></script>
+	<style type="text/css">
+		div.container {
+  			margin: 15px;
+		}
+		div.menu, div.map {
+ 	 		float: left;
+  			padding: 10px;
+		}
+	</style>
     {% if location  == '' %}
         <h2>Enter your location</h2>
 		<form action="/map" method="POST">
@@ -8,12 +24,12 @@
 			{{ form }}
 			<input type='input' value="" name='location'/>
 		</form>
-	{% else %}
+	{% else %} -->
 		<!-- Default map with 600x600 dimensions -->
-		<div class="container">
+		<!-- <div class="container">
 		<div id='cssmenu' class="menu">
 		<ul>
-			{% for ngo in location %}
+			{% for ngo in ngos_name %}
 				<li class='active has-sub'><a href='#'><span> {{ ngo }}</span></a>
 				 	<ul> 
 						<li><a href='#'><span> {{ngo}} </span></a> 
@@ -24,8 +40,59 @@
 		</div>
 		<div class="map">	
 			{% load easy_maps_tags %}
-			{% easy_map location.0  600 600  using "easy_maps/map.html" %}
+			{% easy_map location  600 600  using "easy_maps/map.html" %}
 		</div>
 		
-	{% endif %}
+	{% endif %} -->
+
+
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Collapsible Group Item #1
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Collapsible Group Item #2
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="panel-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Collapsible Group Item #3
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      <div class="panel-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
 {% endblock %}
