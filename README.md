@@ -63,6 +63,24 @@ cd Help-The-Needy/help_the_needy/
 python manage.py runserver
 ```
 
+**Some Errors?**
+
+Make sure you have db.sqlite file. If you do not have it, run
+
+```
+./manage.py syncdb
+```
+
+If it asks
+
+```
+You just installed Django's auth system, which means you don't have any superusers defined.
+Would you like to create one now? (yes/no):
+```
+
+Say no. 
+
+
 
 ## Features
 ### Currently Implemented
