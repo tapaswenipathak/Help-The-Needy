@@ -2,11 +2,13 @@
 
 We want to help you so that you can easily help the needy.
 
+
 ## Setup Instructions
 
 ```
 pip install -r /path/to/requirements.txt
 ```
+
 
 ## To Run
 
@@ -16,12 +18,14 @@ cd Help-The-Needy/help_the_needy/
 python manage.py runserver
 ```
 
+
 ## Features
 ### Currently Implemented
 
 * Enter your address -> get nearby NGOs.
 * Click on the see map -> get the map.
 * Click on the NGO name -> get more information about the NGO.
+
 
 
 ### TODO
@@ -33,11 +37,13 @@ python manage.py runserver
 * NGO page.
 
 
+
 ## Contributing
 
 * You can send patches for above todos.
 * Send us a issue.
 * Find some bugs.
+
 
 
 ## Need some help?
@@ -47,13 +53,13 @@ python manage.py runserver
 
 
 
+##### Thanks for creating the following things!
 
-
-
-
-
-
-
+* Django
+* Freelancer Bootstrap Theme
+* Google Places API
+* Django Easy Map
+* Python Google Places
 
 
 
