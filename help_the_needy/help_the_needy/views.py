@@ -18,7 +18,7 @@ def map(request):
 		loc = request.POST.get('location', '')
 	query_result = google_places.nearby_search(
 			location=loc, keyword='ngos and non profit organizations',
-			radius=20000)
+			radius=200000)
 	for place in query_result.places:
 		place.get_details()
 		ngos[place.name] = [place.formatted_address, place.local_phone_number, place.international_phone_number, place.url, place.website]
