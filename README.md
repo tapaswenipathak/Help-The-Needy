@@ -29,6 +29,18 @@ This will give you all nearby NGOs with a map, given a address by a user.
 	```
 * Generate Google Places API Key 
 
+* Some More Changes
+
+	In settings.py
+
+	```
+
+	 STATICFILES_DIRS =  (
+    			('assets', '/path/to/Help-The-Needy/help_the_needy/static'),
+    			)
+	```
+
+
 ## To Run
 
 ```
