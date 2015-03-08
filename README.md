@@ -2,6 +2,8 @@
 
 We want to help you so that you can easily help the needy.
 
+This will give you all nearby NGOs with a map, given a address by a user.
+
 
 ## Setup Instructions
 
