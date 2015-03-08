@@ -10,7 +10,9 @@ def home(request):
 	return render_to_response('index.html', context_instance=RequestContext(request))
 
 def map(request):
-	ngos_name = {'NGO1':'abcbcbc', 'NGO2':'uuuuuu', 'NGO3':"thierd one"}
+	# ngos_name = {'NGO1':'abcbcbc', 'NGO2':'uuuuuu', 'NGO3':"thierd one"}
+	ngos_name = []
+	ngos_address = []
 	ngos = {}
 	loc = ""
 	if request.method == 'POST':
@@ -26,7 +28,7 @@ def map(request):
 		ngos[place.name] = place.formatted_address
 	print("Here is our dict")
 	print(ngos)
-	return render_to_response('display_list2.html', {'location': 'Indore, India', 'ngos':ngos}, context_instance=RequestContext(request))
+	return render_to_response('display_list2.html', {'location': loc, 'ngos':ngos}, context_instance=RequestContext(request))
 
 def map2(request):
 	loc = request.POST.get('location', '')
