@@ -22,11 +22,21 @@
         <li><a href={{ details.3 }}> Other URL </a></li>        
       </ul>
         <div>
-        <button type="button" class="btn btn-warning pull-right">See Map</button>
+        <button type="button" class="btn btn-warning pull-right" onclick="showMap(details.0)">See Map</button>
+      </div>
+      <div id="map" class="col-lg-6" style="vertical-align:middle; width:75%; float:none; display: inline-block;">      
+      {% load easy_maps_tags %}
+      <!-- map with 600x600 dimensions -->
+      {% easy_map details.0  600 600  using "easy_maps/map.html" %}  
       </div>
       </div>      
     </div>
   </div>
 </div>
 {% endfor %}
+<script>
+  function showMap(location){
+    place = document.getElementById('map');
+  }
+</script>
 {% endblock %}
