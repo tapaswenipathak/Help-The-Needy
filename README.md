@@ -27,7 +27,21 @@ This will give you all nearby NGOs with a map, given a address by a user.
 	sudo apt-get install nodejs
 	sudo npm install bootstrap
 	```
-* Generate Google Places API Key 
+* Generate Google Places API Key (You can use our to test things)
+
+	1. Visit the [Google APIs Console](https://code.google.com/apis/console/b/0/?noredirect) and log in with your Google account.
+
+	2. A default project called API Project is created for you when you first log in to the APIs Console. You can use the project, 		or create a new one by clicking the API Project button at the top of the window and selecting Create. Maps API for Business 		customers must use the API project created for them as part of their Places for Business purchase.
+
+	3. Click the Services link in the left-hand navigation panel.
+
+	4. Click the status switch (the on/off button) next to the Places API entry. The switch slides to ON.
+
+	5. Click API Access in the left-hand navigation panel.
+
+	6. Click Create new Server key. Enter one or more server IP addresses if you wish to restrict the servers that can send API requests.
+
+	7. Click Create. Your API key appears under the heading Key for server apps (with IP locking).
 
 * Some More Changes
 
