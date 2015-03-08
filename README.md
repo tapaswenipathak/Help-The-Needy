@@ -5,9 +5,15 @@ We want to help you so that you can easily help the needy.
 
 ## Setup Instructions
 
-```
-pip install -r /path/to/requirements.txt
-```
+* Clone the source
+	```
+	git clone git@github.com:tapasweni-pathak/Help-The-Needy.git
+	```
+* Install requirements
+
+	```
+	pip install -r /path/to/requirements.txt
+	```
 
 
 ## To Run
