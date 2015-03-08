@@ -27,7 +27,7 @@ This will give you all nearby NGOs with a map, given a address by a user.
 	sudo apt-get install nodejs
 	sudo npm install bootstrap
 	```
-
+* Generate Google Places API Key 
 
 ## To Run
 
