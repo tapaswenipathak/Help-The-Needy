@@ -24,8 +24,8 @@ def map(request):
 	print("query_result is gnerated! length  of places = ", len(query_result.places))
 	for place in query_result.places:
 		place.get_details()
-		print(place.name, place.formatted_address, "@@@@@@@@@@@")
-		ngos[place.name] = place.formatted_address
+		print(place.name, place.formatted_address, place.local_phone_number, place.url)
+		ngos[place.name] = [place.formatted_address, place.local_phone_number, place.international_phone_number, place.url]
 	print("Here is our dict")
 	print(ngos)
 	return render_to_response('display_list2.html', {'location': loc, 'ngos':ngos}, context_instance=RequestContext(request))

@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load staticfiles %}
  {% block content %} 
- {% for ngo, address in ngos.items %}
+ {% for ngo, details in ngos.items %}
 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
   <div class="panel panel-default">
     <div class="panel-heading" role="tab" id="headingOne">
@@ -13,8 +13,10 @@
     </div>
     <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
       <div class="panel-body">
-      {{address}} is the address :) 
-        
+      Details : 
+      {% for detail in details %} </br>
+          {{ detail }}  
+      {% endfor %}        
         <div>
         <button type="button" class="btn btn-warning pull-right">See Map</button>
       </div>
