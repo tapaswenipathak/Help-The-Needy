@@ -6,6 +6,7 @@ We want to help you so that you can easily help the needy.
 ## Setup Instructions
 
 * Clone the source
+
 	```
 	git clone git@github.com:tapasweni-pathak/Help-The-Needy.git
 	```
