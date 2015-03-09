@@ -1,9 +1,11 @@
 # Help-The-Needy
 
+
 We want to help you so that you can easily help the needy.
 
 This will give you all nearby NGOs with a map, given a address by a user.
 
+The [Demo](https://www.youtube.com/watch?v=WnnqsmL-C90).
 
 ## Setup Instructions
 
@@ -112,7 +114,7 @@ Say no.
 ## Need some help?
 
 * Contact [Tapasweni Pathak] (https://github.com/tapasweni-pathak)
-* Contact [Shaifali Aggarwal] (https://github.com/exploreshaifali)
+* Contact [Shaifali Agarwal] (https://github.com/exploreshaifali)
 
 
 
