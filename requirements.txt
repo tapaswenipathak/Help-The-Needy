@@ -5,3 +5,9 @@ django-easy-maps==0.9
 geopy==1.9.1
 python-google-places==0.12.1
 wsgiref==0.1.2
+dj-database-url==0.3.0
+dj-static==0.0.6
+gunicorn==19.1.1
+psycopg2==2.5.1
+static==0.4
+
