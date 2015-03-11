@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+ {% block content %} 
+ {% for ngo, details in ngos.items %}
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          {{ ngo }}
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body">
+      <h5> Details : </h5>
+      <ul>
+        <li><b> Address: </b> {{ details.0 }}</li>
+        <li><b> Local Phone Number: </b> {{ details.1 }} </li>
+        <li><b> International Phone Number: </b>{{ details.2 }}</li>
+        <li><a href={{ details.4 }}> Website </a></li>
+        <li><a href={{ details.3 }}> Other URL </a></li>        
+      </ul>
+      <div id="map" class="col-lg-6" style="vertical-align:middle; width:75%; float:none; display: inline-block;">      
+      {% load easy_maps_tags %}
+      <!-- map with 600x600 dimensions -->
+      {% easy_map details.0  600 200  using "easy_maps/map.html" %}  
+      </div>
+      </div>      
+    </div>
+  </div>
+</div>
+{% endfor %}
+{% endblock %}
