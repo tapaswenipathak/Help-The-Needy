@@ -5,7 +5,9 @@ We want to help you so that you can easily help the needy.
 
 This will give you all nearby NGOs with a map, given a address by a user.
 
-The [Demo](https://www.youtube.com/watch?v=WnnqsmL-C90).
+Running live - [click](http://help-the-needy.herokuapp.com/)
+
+[Demo1](https://www.youtube.com/watch?v=WnnqsmL-C90), [Demo2](https://www.youtube.com/watch?v=NHbM2-qqqEE)
 
 ## Setup Instructions
 
